@@ -2,7 +2,8 @@
 # tasks file for ansible-role-pritunl-client
 
 # we only support Ubuntu distribution
-- assert:
+- name: Check for supported platform
+  assert:
     that:
       - "ansible_distribution == 'Ubuntu'"
     msg: "This role only supports Ubuntu distribution. {{ ansible_distribution }} is not yet supported!"
