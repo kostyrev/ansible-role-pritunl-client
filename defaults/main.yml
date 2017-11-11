@@ -1,0 +1,4 @@
+---
+# defaults file for ansible-role-pritunl-client
+
+pritunl_client_package: pritunl-client

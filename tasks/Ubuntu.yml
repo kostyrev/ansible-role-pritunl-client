@@ -1,0 +1,21 @@
+---
+# Ubuntu tasks file for ansible-role-pritunl-client
+
+- name: Ensure apt key for pritunl client is present
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: "{{ pritunl_client_key }}"
+
+- name: Ensure apt repository for pritunl client is present
+  apt_repository:
+    repo: "{{ pritunl_client_repo }}"
+    filename: pritunl
+    update_cache: yes
+    state: present
+
+- name: Ensure pritunl client is present
+  apt:
+    name: "{{ pritunl_client_package }}={{ pritunl_client_version }}"
+    update_cache: yes
+    cache_valid_time: 3600
+    state: present
