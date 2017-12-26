@@ -17,10 +17,14 @@ platforms:
     volume_mounts:
       - "/sys/fs/cgroup:/sys/fs/cgroup:rw"
     command: "/sbin/init"
+    provision:
+      - echo "resolvconf resolvconf/linkify-resolvconf boolean false" | debconf-set-selections
 
   - name: trusty
     image: ubuntu-upstart:14.04
     command: "/sbin/init"
+    provision:
+      - echo "resolvconf resolvconf/linkify-resolvconf boolean false" | debconf-set-selections
 
 provisioner:
   name: ansible
