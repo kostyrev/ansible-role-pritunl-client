@@ -24,7 +24,6 @@ echo "Running integration tests with inspec..."
 echo ""
 inspec exec --no-color test/smoke/default -t docker://xenial
 inspec exec --no-color test/smoke/default -t docker://trusty
-inspec exec --no-color test/smoke/default -t docker://precise
 
 # clean up
 molecule destroy
