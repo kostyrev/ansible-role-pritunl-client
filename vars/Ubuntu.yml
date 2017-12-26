@@ -3,4 +3,3 @@
 
 pritunl_client_key: 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 pritunl_client_repo: deb http://repo.pritunl.com/stable/apt {{ ansible_distribution_release }} main
-pritunl_client_version: 1.0.1361.39-0ubuntu1~{{ ansible_distribution_release }}

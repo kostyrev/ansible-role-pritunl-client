@@ -15,20 +15,15 @@ describe apt('http://repo.pritunl.com/stable/apt') do
 end
 
 case os[:release]
-when '12.04'
-  describe package('pritunl-client') do
-    it { should be_installed }
-    its('version') { should eq '1.0.1361.39-0ubuntu1~precise' }
-  end
 when '14.04'
   describe package('pritunl-client') do
     it { should be_installed }
-    its('version') { should eq '1.0.1361.39-0ubuntu1~trusty' }
+    its('version') { should eq '1.0.1562.28-0ubuntu1~trusty' }
   end
 when '16.04'
   describe package('pritunl-client') do
     it { should be_installed }
-    its('version') { should eq '1.0.1361.39-0ubuntu1~xenial' }
+    its('version') { should eq '1.0.1562.28-0ubuntu1~xenial' }
   end
 end
 

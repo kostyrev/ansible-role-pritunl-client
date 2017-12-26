@@ -2,3 +2,4 @@
 # defaults file for ansible-role-pritunl-client
 
 pritunl_client_package: pritunl-client
+pritunl_client_version: 1.0.1562.28-0ubuntu1~{{ ansible_distribution_release }}
